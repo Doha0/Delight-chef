@@ -9,18 +9,18 @@ const ChefCard = ({ chefs }) => {
         likes,
         viewRecipesButton } = chefs;
     return (
-        <div className="card lg:card-side bg-base-100 shadow-xl">
-            <figure>
-                <img className='w-1/2 object-contain' src={chefPicture} alt="Album" />
+        <div className="card lg:card-side bg-base-100 p-8 shadow-xl">
+            <figure className='w-10/12 object-cover '>
+                <img className='img-fluid' src={chefPicture} alt="Album" />
             </figure>
-            <div className="card-body">
-                <h2 className="card-title">Name: {chefName}</h2>
-                <p>Experience: {yearsOfExperience}</p>
-                <p>Recipes: {numberOfRecipes}</p>
-                <p>Likes: {likes}</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">{viewRecipesButton}</button>
-                </div>
+            <div className="card-body pl-8">
+
+                <h2 className="font-semibold pt-6 text-xl">{chefName}</h2>
+                <p className='paragraph-font '>Experience: {yearsOfExperience}</p>
+                <p className='paragraph-font '>Recipes: {numberOfRecipes}</p>
+                <p className='paragraph-font pb-6'>Likes: {likes}</p>
+                <button className="custom-button">{viewRecipesButton}</button>
+
             </div>
         </div>
     );

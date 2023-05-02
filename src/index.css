@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.img-fluid {
+    width: 100%;
+}
+
+.paragraph-font {
+    @apply font-medium pt-4;
+}
+
+.custom-button {
+    @apply btn bg-orange-500 hover:bg-orange-700 border-none normal-case;
+}
