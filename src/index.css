@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.custom-title {
+    @apply text-center text-4xl font-semibold;
+}
+
 .paragraph-font {
     @apply font-medium pt-4;
 }

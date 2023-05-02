@@ -4,7 +4,7 @@ import RecipeCard from '../RecipeCard/RecipeCard';
 
 const Recipe = () => {
     const recipe = useLoaderData();
-    console.log(recipe);
+    // console.log(recipe);
     const {
         chefPicture,
         chefName,
@@ -15,7 +15,7 @@ const Recipe = () => {
     const recipeData = recipe.recipes;
     return (
         <div>
-            <div className="hero min-h-screen bg-orange-50">
+            <div className="hero min-h-screen bg-orange-50 mb-6">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <img src={chefPicture} className="max-w-sm rounded-lg shadow-2xl" />
                     <div className='text-center'>
@@ -27,7 +27,8 @@ const Recipe = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <h2 className='custom-title py-10'>Special Recipe of {chefName}</h2>
+            <div className='grid grid-cols-1 md:grid-cols-3 mt-10 space-x-8'>
                 {
                     recipeData.map((recipeData, idx) => <RecipeCard
                         key={idx}
