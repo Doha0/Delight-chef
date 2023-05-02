@@ -72,7 +72,7 @@ const Footer = () => {
             </footer>
             <footer className="footer px-10 py-4 md:px-36 border-t bg-base-200 text-base-content border-base-300">
                 <div className="items-center grid-flow-col">
-                    <img src="/workCycle.png" alt="" className="w-12 h-12" />
+                    <img src="/" alt="" className="w-12 h-12" />
                     <p>
                         Delight Chef <br />
                         Providing reliable services since 2013
