@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import ChefCard from '../ChefCard/ChefCard';
+import { useNavigation } from 'react-router-dom';
+import Spinner from '../../../Components/Shared/Spinner/Spinner';
 
 const Chefs = () => {
+
+    const navigation = useNavigation();
+    if (navigation.state === "loading") {
+        return <Spinner></Spinner>;
+    }
 
     const [chef, setChef] = useState([]);
 

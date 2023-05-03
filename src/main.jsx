@@ -8,6 +8,7 @@ import {
 import Main from './Layout/Main';
 import Home from './Pages/HomePage/Home/Home';
 import Recipe from './Pages/Recipe/Recipe';
+import Spinner from './Components/Shared/Spinner/Spinner';
 
 const router = createBrowserRouter([
   {
