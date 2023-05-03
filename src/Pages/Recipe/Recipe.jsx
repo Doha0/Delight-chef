@@ -1,15 +1,9 @@
 import React from 'react';
-import { useLoaderData, useNavigation } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 import RecipeCard from '../RecipeCard/RecipeCard';
-import Spinner from '../../Components/Shared/Spinner/Spinner';
+
 
 const Recipe = () => {
-
-    const navigation = useNavigation();
-    console.log(navigation.state)
-    if (navigation.state === "loading") {
-        return <Spinner></Spinner>;
-    }
 
     const recipe = useLoaderData();
     // console.log(recipe);
@@ -21,6 +15,7 @@ const Recipe = () => {
         numberOfRecipes,
         likes } = recipe;
     const recipeData = recipe.recipes;
+
     return (
         <div>
             <div className="hero min-h-screen bg-orange-50 mb-6">

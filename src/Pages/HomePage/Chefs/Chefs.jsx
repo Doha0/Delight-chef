@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import ChefCard from '../ChefCard/ChefCard';
-import { useNavigation } from 'react-router-dom';
+
 import Spinner from '../../../Components/Shared/Spinner/Spinner';
 
 const Chefs = () => {
 
-    const navigation = useNavigation();
-    if (navigation.state === "loading") {
-        return <Spinner></Spinner>;
-    }
+    const [loader, setLoader] = useState(true);
 
     const [chef, setChef] = useState([]);
 
@@ -17,7 +14,12 @@ const Chefs = () => {
             .then(res => res.json())
             .then(data => setChef(data))
             .catch(error => console.log(error))
+        setLoader(false)
     }, []);
+
+    if (loader) {
+        return <Spinner></Spinner>;
+    }
 
     return (
         <div className='mx-4'>
