@@ -10,6 +10,7 @@ import Home from './Pages/HomePage/Home/Home';
 import Recipe from './Pages/Recipe/Recipe';
 import Spinner from './Components/Shared/Spinner/Spinner';
 import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>
+      },
+      {
+        path: "/sign-up",
+        element: <Register></Register>
       }
     ],
   },

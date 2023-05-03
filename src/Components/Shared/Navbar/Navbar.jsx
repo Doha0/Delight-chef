@@ -13,6 +13,7 @@ const Navbar = () => {
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/'>Blog</Link></li>
                         <li><Link to='/login'>Login</Link></li>
+                        <li><Link to='/sign-up'>Register</Link></li>
                     </ul>
                 </div>
                 <Link to='/' className="btn btn-ghost font-bold normal-case text-2xl">Delight Chef</Link>
@@ -22,10 +23,11 @@ const Navbar = () => {
                     <li><Link to='/'>Home</Link></li>
                     <li><Link to='/'>Blog</Link></li>
                     <li><Link to='/login'>Login</Link></li>
+                    <li><Link to='/sign-up'>Register</Link></li>
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="custom-button btn-md ">Login Now</a>
+                <Link to='/login' className="custom-button btn-md ">Login Now</Link>
             </div>
         </nav>
     );
