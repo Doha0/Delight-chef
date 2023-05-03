@@ -21,3 +21,7 @@
 .color {
     background-color: #92400e;
 }
+
+.custom-icon{
+    @apply flex justify-start items-center;
+}

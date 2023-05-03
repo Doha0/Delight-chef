@@ -9,6 +9,7 @@ import Main from './Layout/Main';
 import Home from './Pages/HomePage/Home/Home';
 import Recipe from './Pages/Recipe/Recipe';
 import Spinner from './Components/Shared/Spinner/Spinner';
+import Login from './Pages/Login/Login';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         path: "/:id",
         element: <Recipe></Recipe>,
         loader: ({ params }) => fetch(`https://delight-chef-server-doha0.vercel.app/chefdata/${params.id}`)
+      },
+      {
+        path: "/login",
+        element: <Login></Login>
       }
     ],
   },
