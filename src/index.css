@@ -18,6 +18,10 @@
     @apply btn bg-orange-500 hover:bg-orange-700 border-none;
 }
 
+.logout-button{
+    @apply btn bg-emerald-500 hover:bg-emerald-800 border-none;
+}
+
 .color {
     background-color: #92400e;
 }
