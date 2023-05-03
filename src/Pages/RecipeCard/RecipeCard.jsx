@@ -4,7 +4,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const RecipeCard = ({ recipeData }) => {
     const [favorite, setFavorite] = useState(true);
 
-    const { name, image, ingredients, method, rating, isFavorite } = recipeData;
+    const { name, image, ingredients, method, rating } = recipeData;
 
     const handleFavorite = () => {
         setFavorite(false);

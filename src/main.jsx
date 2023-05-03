@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/:id",
         element: <Recipe></Recipe>,
-        loader: ({ params }) => fetch(`http://localhost:5000/chefdata/${params.id}`)
+        loader: ({ params }) => fetch(`https://delight-chef-server-doha0.vercel.app/chefdata/${params.id}`)
       }
     ],
   },
