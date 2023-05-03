@@ -17,3 +17,7 @@
 .custom-button {
     @apply btn bg-orange-500 hover:bg-orange-700 border-none;
 }
+
+.color{
+    background-color: #f97316
+}
