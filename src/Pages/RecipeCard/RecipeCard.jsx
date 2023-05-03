@@ -1,23 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const RecipeCard = ({ recipeData }) => {
-    console.log(recipeData);
+    const [favorite, setFavorite] = useState(true);
+
     const { name, image, ingredients, method, rating, isFavorite } = recipeData;
+
+    const handleFavorite = () => {
+        setFavorite(false);
+        alert("The Recipe is your Favorite");
+    };
     return (
-        <div className=' w-full px-8'>
+        <div className='card bg-base-100 shadow-xl w-full px-6'>
             <div className=" avatar">
                 <div className="w-full rounded ">
                     <img src={image} />
                 </div>
             </div>
-            <div className='flex flex-col p-8'>
+            <div className='card-body'>
                 <p className='font-semibold text-2xl text-center'>{name} </p>
-                <p className='paragraph-font '>Ingredients: {ingredients} </p>
-                <p className='paragraph-font '>Rating: {rating} </p>
-                <p className='paragraph-font mb-8'>Method: {method} </p>
-                <button className='custom-button'>Favorite</button>
+                <p className='pt-2'> <a className='font-medium '>Ingredients:</a>  {ingredients} </p>
+                <p className='pt-2'> <a className='font-medium '>Rating:</a>  {rating} </p>
+                <p className='pt-2 mb-4'> <a className='font-medium '>Method:</a>  {method.substring(0, 400)}... </p>
+                <div className='card-actions justify-center items-center'>
+                    <button onClick={handleFavorite} className={`btn btn-error bg-orange-500 btn-wide text-white ${!favorite ? "btn-disabled bg-slate-200" : ""
+                        }`}  >Favorite</button>
+                </div>
             </div>
-        </div>
+        </div >
     );
 };
 

@@ -28,7 +28,7 @@ const Recipe = () => {
                 </div>
             </div>
             <h2 className='custom-title py-10'>Special Recipe of {chefName}</h2>
-            <div className='grid grid-cols-1 md:grid-cols-3 mt-10 space-x-8'>
+            <div className='grid grid-cols-1 md:grid-cols-3 mt-10 gap-4'>
                 {
                     recipeData.map((recipeData, idx) => <RecipeCard
                         key={idx}
