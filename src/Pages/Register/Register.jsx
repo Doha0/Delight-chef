@@ -33,12 +33,13 @@ const Register = () => {
                     }).catch((error) => {
 
                     });
-                console.log(createdUser);
+                // console.log(createdUser);
                 form.reset();
             })
             .catch((error) => {
                 const errorMessage = error.message;
-                console.log(errorMessage);
+                // console.log(errorMessage);
+                setError(errorMessage);
             });
 
 

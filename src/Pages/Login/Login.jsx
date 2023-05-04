@@ -1,8 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const Login = () => {
+
+    const [error, setError] = useState('');
 
     const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -17,7 +19,8 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         //console.log(email, password);
-
+        
+        setError('');
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
@@ -27,7 +30,8 @@ const Login = () => {
             })
             .catch(error => {
                 const errorMessage = error.message;
-                console.log(errorMessage);
+                // console.log(errorMessage);
+                setError(errorMessage);
             })
     }
 
@@ -35,11 +39,13 @@ const Login = () => {
         googleSignIn()
             .then(result => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                // console.log(loggedUser);
                 navigate(pathFrom, { replace: true });
             })
             .catch(error => {
-                console.log(error)
+                const errorMessage = error.message;
+                // console.log(errorMessage);
+                setError(errorMessage);
             })
     }
 
@@ -47,11 +53,13 @@ const Login = () => {
         githubSignIn()
             .then((result) => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                // console.log(loggedUser);
                 navigate(pathFrom, { replace: true });
             })
             .catch(error => {
-                console.log('error', error.message);
+                const errorMessage = error.message;
+                // console.log(errorMessage);
+                setError(errorMessage);
             })
     }
 
@@ -95,6 +103,9 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button onClick={handleGithubSignIn} className="btn bg-black hover:bg-slate-800 text-white">Sign-in with GitHub</button>
                             </div>
+                            <label className="label">
+                                <p className="text-red-700">{error} </p>
+                            </label>
                         </div>
                     </div>
                 </div>

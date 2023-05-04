@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const RecipeCard = ({ recipeData }) => {
     const [favorite, setFavorite] = useState(true);
@@ -29,9 +31,16 @@ const RecipeCard = ({ recipeData }) => {
             </div>
             <div className='card-body'>
                 <p className='font-semibold text-2xl text-center'>{name} </p>
-                <p className='pt-2'> <a className='font-medium '>Ingredients:</a>  {ingredients} </p>
-                <p className='pt-2'> <a className='font-medium '>Rating:</a>  {rating} </p>
-                <p className='pt-2 mb-4'> <a className='font-medium '>Method:</a>  {method.substring(0, 400)}... </p>
+                <p className='pt-2'> <span className='font-medium '>Ingredients:</span>  {ingredients} </p>
+                <p className='pt-2 flex items-center'>
+                    <span className='font-medium pr-2'>Rating:</span>
+                    <Rating
+                        style={{ maxWidth: 180 }}
+                        value={rating}
+                        readOnly
+                    />
+                </p>
+                <p className='pt-2 mb-4'> <span className='font-medium '>Method:</span>  {method.substring(0, 400)}... </p>
                 <div className='card-actions justify-center items-center'>
                     <button onClick={handleFavorite} className={`btn btn-error bg-orange-500 btn-wide text-white ${!favorite ? "btn-disabled bg-slate-200" : ""
                         }`}  >Favorite</button><Toaster />
