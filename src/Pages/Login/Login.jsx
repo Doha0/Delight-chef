@@ -49,6 +49,12 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button className="custom-button">Login</button>
                             </div>
+                            <div className="form-control mt-6">
+                                <button className="btn bg-white hover:bg-slate-200 text-black ">Sign-in with Google</button>
+                            </div>
+                            <div className="form-control mt-6">
+                                <button className="btn bg-black hover:bg-slate-800 text-white">Sign-in with GitHub</button>
+                            </div>
                             <label className="label">
                                 <Link to='/sign-up' className="label-text-alt link link-hover">New to Delight Chef? Create An Account</Link>
                             </label>

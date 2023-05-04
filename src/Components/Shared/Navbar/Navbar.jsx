@@ -38,12 +38,14 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                {user ? <div> <a>Welcome {user.email}</a> <button
-                    onClick={handelLogOut} className="logout-button">Log Out</button></div>
+                {user ? <div className='flex gap-2'>
+                    <img className="w-12 rounded-full" src={user.photoURL} />
+                    <button
+                        onClick={handelLogOut} className="logout-button">Log Out</button></div>
                     : <div><Link to='/login' className="custom-button" >Login Now</Link></div>
                 }
             </div>
-        </nav>
+        </nav >
     );
 };
 

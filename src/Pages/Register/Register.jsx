@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, userDetails } = useContext(AuthContext);
     const handelSignUp = (event) => {
         event.preventDefault();
 
         const form = event.target;
         const name = form.name.value;
-        const photoUrl = form.photoUrl.value;
+        const photo = form.photoUrl.value;
         const email = form.email.value;
         const password = form.password.value;
 
@@ -17,12 +17,23 @@ const Register = () => {
         createUser(email, password)
             .then((result) => {
                 const createdUser = result.user;
+                userDetails(name, photo)
+                    .then(() => {
+                        // Profile updated!
+                        // ...
+                    }).catch((error) => {
+                        // An error occurred
+                        // ...
+                    });
                 console.log(createdUser);
             })
             .catch((error) => {
                 const errorMessage = error.message;
                 console.log(errorMessage);
             });
+
+
+
     }
 
 
