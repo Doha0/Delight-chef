@@ -3,6 +3,7 @@ import Chefs from '../Chefs/Chefs';
 import background from "../../../assets/food-7.jpg";
 import { Link } from 'react-router-dom';
 import TopRecipe from '../TopRecipe/TopRecipe';
+import HappyClients from '../HappyClients/HappyClients';
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             </div>
             <Chefs></Chefs>
             <TopRecipe></TopRecipe>
+            <HappyClients></HappyClients>
         </div>
     );
 };
