@@ -4,7 +4,9 @@ import { AuthContext } from '../../Providers/AuthProvider';
 
 const Login = () => {
 
-    const { signIn } = useContext(AuthContext);
+    const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
+
+
 
     const handelLogin = (event) => {
         event.preventDefault();
@@ -24,6 +26,31 @@ const Login = () => {
                 console.log(errorMessage);
             })
     }
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
+    const handleGithubSignIn = () => {
+        githubSignIn()
+            .then((result) => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+            })
+            .catch(error => {
+                console.log('error', error.message);
+            })
+    }
+
+
+
 
     return (
         <div className='grid grid-cols-1 justify-items-center mt-20' >
@@ -49,16 +76,20 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button className="custom-button">Login</button>
                             </div>
-                            <div className="form-control mt-6">
-                                <button className="btn bg-white hover:bg-slate-200 text-black ">Sign-in with Google</button>
-                            </div>
-                            <div className="form-control mt-6">
-                                <button className="btn bg-black hover:bg-slate-800 text-white">Sign-in with GitHub</button>
-                            </div>
                             <label className="label">
                                 <Link to='/sign-up' className="label-text-alt link link-hover">New to Delight Chef? Create An Account</Link>
                             </label>
                         </form>
+                        <div className='card-body'>
+                            <hr />
+                            <p className='text-center '>or</p>
+                            <div className="form-control mt-6">
+                                <button onClick={handleGoogleSignIn} className="btn bg-white hover:bg-slate-200 text-black ">Sign-in with Google</button>
+                            </div>
+                            <div className="form-control mt-6">
+                                <button onClick={handleGithubSignIn} className="btn bg-black hover:bg-slate-800 text-white">Sign-in with GitHub</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

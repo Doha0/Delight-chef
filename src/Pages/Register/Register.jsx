@@ -19,11 +19,9 @@ const Register = () => {
                 const createdUser = result.user;
                 userDetails(name, photo)
                     .then(() => {
-                        // Profile updated!
-                        // ...
+
                     }).catch((error) => {
-                        // An error occurred
-                        // ...
+
                     });
                 console.log(createdUser);
             })
