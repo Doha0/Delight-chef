@@ -9,7 +9,7 @@ const TopRecipe = () => {
     return (
         <div className='text-center'>
             <h2 className='custom-title py-6'>Recipe of the Month</h2>
-            <p className='py-4  text-xl'>Each dish telling a story of history, culture, and tradition.</p>
+            <p className='py-4  text-xl mx-4'>Each dish telling a story of history, culture, and tradition.</p>
             <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 justify-items-center'>
                 <div className="card w-11/12 bg-base-100 shadow-xl">
                     <div className="card-body items-center text-center">

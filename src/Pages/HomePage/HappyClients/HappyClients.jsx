@@ -6,7 +6,7 @@ import c2 from '../../../assets/c2.jpg'
 const HappyClients = () => {
     return (
         <div className='text-center'>
-            <h2 className='custom-title py-6'>Our Happy Clients</h2>
+            <h2 className='custom-title py-6 mt-8'>Our Happy Clients</h2>
             <p className='py-6  text-xl'> We are proud to have a loyal base of happy clients who continue to choose us for our delicious food, exceptional service, and inviting atmosphere.</p>
 
             <div className='mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4 justify-items-center'>
