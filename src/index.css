@@ -19,7 +19,7 @@
 }
 
 .logout-button{
-    @apply btn bg-emerald-500 hover:bg-emerald-800 border-none;
+    @apply btn bg-red-600 hover:bg-red-800 border-none;
 }
 
 .color {
