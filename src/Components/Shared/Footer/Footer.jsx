@@ -1,9 +1,10 @@
 import React from 'react';
+import chefIcon from "../../../assets/cooking.png"
 
 const Footer = () => {
     return (
         <div className=" mt-36">
-            <footer className="footer p-10 md:pl-36 bg-base-200 text-base-content">
+            <footer className="footer p-10 md:pl-36 bg-slate-800 text-white">
                 <div>
                     <span className="text-2xl font-bold text-gray-600">
                         Delight Chef
@@ -50,29 +51,31 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <span className="footer-title">Services</span>
+                    <span className="footer-title">Recipes</span>
                     <a className="link link-hover">Kebab</a>
                     <a className="link link-hover">Style Pizza</a>
                     <a className="link link-hover">Strips Of Lamb</a>
                     <a className="link link-hover">Turkish Soup</a>
                 </div>
                 <div>
-                    <span className="footer-title">Company</span>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <span className="footer-title">Chefs</span>
+                    <a className="link link-hover">Emr Yılmaz</a>
+                    <a className="link link-hover">Ali Öztürk</a>
+                    <a className="link link-hover">Burak Kaya</a>
+                    <a className="link link-hover">Usuf Ayın</a>
                 </div>
                 <div>
-                    <span className="footer-title">Legal</span>
-                    <a className="link link-hover">Terms of use</a>
-                    <a className="link link-hover">Privacy policy</a>
-                    <a className="link link-hover">Cookie policy</a>
+                    <span className="footer-title">Social</span>
+                    <a className="link link-hover">Facebook</a>
+                    <a className="link link-hover">Youtube</a>
+                    <a className="link link-hover">Twitter</a>
+                    <a className="link link-hover">Instagram</a>
                 </div>
+
             </footer>
-            <footer className="footer px-10 py-4 md:px-36 border-t bg-base-200 text-base-content border-base-300">
+            <div className="footer px-10 py-4 md:px-36  bg-slate-800 text-white">
                 <div className="items-center grid-flow-col">
-                    <img src="/" alt="" className="w-12 h-12" />
+                    <img src={chefIcon} alt="" className="w-12 h-12" />
                     <p>
                         Delight Chef <br />
                         Providing reliable services since 2013
@@ -84,7 +87,8 @@ const Footer = () => {
                         @2023 delightchef. All Rights Reserved
                     </p>
                 </div>
-            </footer>
+            </div>
+
         </div>
     );
 };

@@ -39,7 +39,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 {user ? <div className='flex gap-2'>
-                    <img className="w-12 rounded-full" src={user?.photoURL} />
+                    <img className="w-12 rounded-full" title={user?.displayName} src={user?.photoURL} />
                     <button
                         onClick={handelLogOut} className="logout-button">Log Out</button></div>
                     : <div><Link to='/login' className="custom-button" >Login Now</Link></div>
