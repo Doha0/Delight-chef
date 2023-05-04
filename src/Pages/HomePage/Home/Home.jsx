@@ -19,7 +19,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <LazyLoad  offset={300} onContentVisible={() => {console.log('loaded!')}}>
+            <LazyLoad offset={150} onContentVisible={() => { console.log('loaded!') }}>
                 <Chefs></Chefs>
             </LazyLoad>
 
