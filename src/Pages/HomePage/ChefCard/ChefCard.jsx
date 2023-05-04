@@ -24,7 +24,7 @@ const ChefCard = ({ chefs }) => {
                 <p className='paragraph-font custom-icon'><GiChefToque size={22} className='text-orange-500' />Experience: <span className='pl-2'>{yearsOfExperience}</span></p>
                 <p className='paragraph-font custom-icon'><GiCampCookingPot size={22} className='text-orange-500' /> Recipe: <span className='pl-2'>{numberOfRecipes}</span></p>
                 <p className='paragraph-font pb-6 custom-icon'><AiFillLike className='text-orange-500' size={22} /> Likes: <span className='pl-2'>{likes}</span></p>
-                <Link to={`/${_id}`} className="custom-button">{viewRecipesButton}</Link>
+                <Link to={`/chefdata/${_id}`} className="custom-button">{viewRecipesButton}</Link>
 
             </div>
         </div>

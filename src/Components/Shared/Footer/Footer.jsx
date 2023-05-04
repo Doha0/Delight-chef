@@ -6,7 +6,7 @@ const Footer = () => {
         <div className=" mt-36">
             <footer className="footer p-10 md:pl-36 bg-slate-900 text-white">
                 <div>
-                    <span className="text-2xl font-bold text-gray-600">
+                    <span className="text-2xl font-bold text-orange-500">
                         Delight Chef
                     </span>
                     <p className="text-lg">

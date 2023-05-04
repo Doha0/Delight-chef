@@ -2,11 +2,12 @@ import React from 'react';
 import Chefs from '../Chefs/Chefs';
 import background from "../../../assets/food-7.jpg";
 import { Link } from 'react-router-dom';
+import TopRecipe from '../TopRecipe/TopRecipe';
 
 const Home = () => {
     return (
         <div>
-            <div className="hero min-h-screen my-10 " style={{ backgroundImage: `url(${background})` }}>
+            <div className="hero min-h-screen mb-10 " style={{ backgroundImage: `url(${background})` }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-left text-neutral-content ">
                     <div className='sm:mx-auto lg:mr-96 px-4 lg:pr-56 '>
@@ -17,6 +18,7 @@ const Home = () => {
                 </div>
             </div>
             <Chefs></Chefs>
+            <TopRecipe></TopRecipe>
         </div>
     );
 };

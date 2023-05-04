@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
 
 const Navbar = () => {
@@ -19,10 +19,9 @@ const Navbar = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/'>Blog</Link></li>
-                        <li><Link to='/login'>Login</Link></li>
-                        <li><Link to='/sign-up'>Register</Link></li>
+                        <li><NavLink to='/'>Home</NavLink></li>
+                        <li><NavLink to='/blog'>Blog</NavLink></li>
+                        <li><NavLink to='/sign-up'>Register</NavLink></li>
 
                     </ul>
                 </div>
@@ -30,10 +29,9 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden font-medium lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/'>Blog</Link></li>
-                    <li><Link to='/login'>Login</Link></li>
-                    <li><Link to='/sign-up'>Register</Link></li>
+                    <li><NavLink to='/'>Home</NavLink></li>
+                    <li><NavLink to='/blog'>Blog</NavLink></li>
+                    <li><NavLink to='/sign-up'>Register</NavLink></li>
 
                 </ul>
             </div>
