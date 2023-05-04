@@ -12,6 +12,7 @@ import Spinner from './Components/Shared/Spinner/Spinner';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import AuthProvider from './Providers/AuthProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/:id",
-        element: <Recipe></Recipe>,
+        element: <PrivateRoute><Recipe></Recipe></PrivateRoute>,
         loader: ({ params }) => fetch(`https://delight-chef-server-doha0.vercel.app/chefdata/${params.id}`)
       },
       {

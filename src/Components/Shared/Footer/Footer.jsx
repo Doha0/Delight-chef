@@ -4,7 +4,7 @@ import chefIcon from "../../../assets/cooking.png"
 const Footer = () => {
     return (
         <div className=" mt-36">
-            <footer className="footer p-10 md:pl-36 bg-slate-800 text-white">
+            <footer className="footer p-10 md:pl-36 bg-slate-900 text-white">
                 <div>
                     <span className="text-2xl font-bold text-gray-600">
                         Delight Chef
@@ -73,7 +73,7 @@ const Footer = () => {
                 </div>
 
             </footer>
-            <div className="footer px-10 py-4 md:px-36  bg-slate-800 text-white">
+            <div className="footer px-10 py-4 md:px-36  bg-slate-900 text-white">
                 <div className="items-center grid-flow-col">
                     <img src={chefIcon} alt="" className="w-12 h-12" />
                     <p>

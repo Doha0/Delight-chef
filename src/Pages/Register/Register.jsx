@@ -34,6 +34,7 @@ const Register = () => {
 
                     });
                 console.log(createdUser);
+                form.reset();
             })
             .catch((error) => {
                 const errorMessage = error.message;
