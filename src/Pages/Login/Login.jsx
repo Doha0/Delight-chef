@@ -66,19 +66,15 @@ const Login = () => {
     }
 
 
-
-
     return (
         <div className='grid grid-cols-1 justify-items-center mt-20' >
-            <div className="hero w-8/12 p-20 bg-orange-50">
+            <div className="hero min-h-screen bg-base-100">
                 <div className="hero-content flex-col">
                     <div className="text-center">
                         <h1 className="text-5xl my-4 font-bold">Login to Delight Chef!</h1>
                     </div>
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body ">
-
-
                             <form onSubmit={handelLogin} >
                                 <div className="form-control">
                                     <label className="label">
@@ -107,7 +103,6 @@ const Login = () => {
                             <p className="label">
                                 <p className="text-red-700">{error} </p>
                             </p>
-
                         </div>
 
                     </div>

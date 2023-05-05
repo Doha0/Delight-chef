@@ -49,7 +49,7 @@ const Register = () => {
 
     return (
         <div className='grid grid-cols-1 justify-items-center mt-20' >
-            <div className="hero w-8/12 p-20 bg-orange-50">
+            <div className="hero min-h-screen bg-base-100">
                 <div className="hero-content flex-col">
                     <div className="text-center">
                         <h1 className="text-5xl my-4 font-bold">New to Delight Chef? <br /> <p className='py-4'>Register Now</p></h1>
@@ -78,7 +78,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name='password' className="input input-bordered" required />
+                                <input type="password" name='password' className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
                                 <button className="custom-button">Register</button>

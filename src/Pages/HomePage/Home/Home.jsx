@@ -4,7 +4,7 @@ import background from "../../../assets/food-7.jpg";
 import { Link } from 'react-router-dom';
 import TopRecipe from '../TopRecipe/TopRecipe';
 import HappyClients from '../HappyClients/HappyClients';
-import LazyLoad from 'react-lazy-load';
+
 
 const Home = () => {
     return (
@@ -19,9 +19,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <LazyLoad offset={150} onContentVisible={() => { console.log('loaded!') }}>
-                <Chefs></Chefs>
-            </LazyLoad>
+
+            <Chefs></Chefs>
 
             <TopRecipe></TopRecipe>
             <HappyClients></HappyClients>

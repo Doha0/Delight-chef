@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { AiFillLike } from 'react-icons/ai';
 import { GiCampCookingPot } from 'react-icons/gi'
 import { GiChefToque } from 'react-icons/gi'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const ChefCard = ({ chefs }) => {
     const {
@@ -16,7 +18,13 @@ const ChefCard = ({ chefs }) => {
     return (
         <div className="card lg:card-side bg-orange-50 p-8 shadow-xl">
             <figure className='w-10/12 object-cover '>
-                <img className='img-fluid' src={chefPicture} alt="Album" />
+                {/* <img className='img-fluid' src={chefPicture} alt="Album" /> */}
+                <LazyLoadImage
+                    effect="blur"
+                    delayTime={100}
+                    src={chefPicture}
+                    alt="chef picture"
+                />
             </figure>
             <div className="card-body pl-8">
 
